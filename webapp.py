@@ -13,7 +13,7 @@ def render_response():
     # args is a MultiDict (like a dictionary but can have multiple values for the same keys
     # The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
     num_burritos = money/8.5
-    return render_template('burrito_response.html', response = num_burritos)
+    return render_template('burrito_response.html', num_burritos)
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
