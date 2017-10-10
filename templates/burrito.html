@@ -12,7 +12,8 @@
       <input type="submit">
     </form>
 
-    <p>You are able to buy {{ response }} burritos.</p>
-
+    {% if response is defined %}
+        <p>You are able to buy {{ response }} burritos.</p>
+    {% endif %}
   </body>
 </html>
