@@ -20,7 +20,6 @@ def render_burrito():
 
 @app.route("/meter")
 def render_meter():
-    test = "Nope"
     if 'meters' in request.args:
         meters = float(request.args['meters'])
         centimeters = roundFloat(meters*100)
