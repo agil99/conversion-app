@@ -4,14 +4,16 @@
 {% block title %}Meter to centimeter conversion{% endblock %}
 
 {% block content %}
-    <form action='/meter'>
-      Enter the number of meters.<br>
-      <input type="text" name="meters">
-      <br><br>
-      <input type="submit">
-    </form>
+    <center>
+        <form action='/meter'>
+          Enter the number of meters.<br>
+          <input type="text" name="meters">
+          <br><br>
+          <input type="submit">
+        </form>
 
-    {% if response is defined %}
-        <p>This is equivalent to {{ response }} centimeters.</p>
-    {% endif %}
+        {% if response is defined %}
+            <p>This is equivalent to {{ response }} centimeters.</p>
+        {% endif %}
+    </center>
 {% endblock %}

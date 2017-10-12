@@ -4,14 +4,17 @@
 {% block title %}Errors to Angries{% endblock %}
 
 {% block content %}
-    <form action='/error'>
-      Enter number of errors you have<br>
-      <input type="text" name="errors">
-      <br><br>
-      <input type="submit">
-    </form>
 
-    {% if response is defined %}
-        <p>You are {{ response }} angries mad.</p>
-    {% endif %}
+    <center>
+        <form action='/error'>
+          Enter number of errors you have<br>
+          <input type="text" name="errors">
+          <br><br>
+          <input type="submit">
+        </form>
+
+        {% if response is defined %}
+            <p>You are {{ response }} angries mad.</p>
+        {% endif %}
+    </center>
 {% endblock %}
