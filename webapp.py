@@ -21,8 +21,9 @@ def render_meter():
     if 'meters' in request.args:
         meters = float(request.args['meters'])
         centimeters = roundFloat(meters*100)
-        test = centimeters
-    return render_template('meter_to_centimeter.html' response = test)
+        return render_template('meter_to_centimeter.html', response = centimeters)
+    else:
+        return render_template('meter_to_centimeter.html')
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
