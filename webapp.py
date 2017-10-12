@@ -16,7 +16,7 @@ def render_burrito():
     return render_template('burrito.html', response = num_burritos)
 
 @app.route("/meter")
-def render_template():
+def render_meter():
     meters = float(request.args['meters'])
     centimeters = roundFloat(meters*100)
     return render_template('meter_to_centimeter.html', response = centimeters)
