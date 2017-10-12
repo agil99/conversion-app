@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meter to centimeter conversion</title>
+  </head>
+  <body>
+
+    <form action='/burrito'>
+      Enter the number of meters.<br>
+      <input type="text" name="meters">
+      <br><br>
+      <input type="submit">
+    </form>
+
+    {% if response is defined %}
+        <p>This is equivalent to {{ response }} centimeters.</p>
+    {% endif %}
+
+  </body>
+</html>
