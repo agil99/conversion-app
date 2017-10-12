@@ -17,12 +17,12 @@ def render_burrito():
 
 @app.route("/meter")
 def render_meter():
+    test = "Nope"
     if 'meters' in request.args:
-        meters = request.args['meters']
+        meters = float(request.args['meters'])
         centimeters = roundFloat(meters*100)
-        return render_template('meter_to_centimeter.html', response = centimeters)
-    else:
-        return render_template('meter_to_centimeter.html' response = "Enter")
+        test = centimeters
+    return render_template('meter_to_centimeter.html' response = test)
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
