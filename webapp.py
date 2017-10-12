@@ -8,7 +8,7 @@ def render_main():
 
 @app.route("/burrito")
 def render_burrito():
-    if 'money' in request.args['money']:
+    if 'money' in request.args:
         money = float(request.args['money'])
         # The request object stores information about the request sent to the server.
         # args is a MultiDict (like a dictionary but can have multiple values for the same keys
