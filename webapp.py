@@ -19,7 +19,7 @@ def render_burrito():
 def render_meter():
     meters = float(request.args['meters'])
     centimeters = roundFloat(meters*100)
-    return render_template('meter_to_centimeter.html', response = centimeters)
+    return render_template('meter_to_centimeter.html')
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
