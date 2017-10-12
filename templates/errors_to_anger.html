@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number of code errors to amount of anger</title>
+  </head>
+  <body>
+
+    <form action='/meter'>
+      Enter number of errors you have<br>
+      <input type="text" name="errors">
+      <br><br>
+      <input type="submit">
+    </form>
+
+    {% if response is defined %}
+        <p>You are {{ response }} angries mad.</p>
+    {% endif %}
+
+  </body>
+</html>

@@ -27,6 +27,15 @@ def render_meter():
     else:
         return render_template('meter_to_centimeter.html')
 
+@app.route("/error")
+def render_error():
+    if 'errors' in request.args:
+        errors = float(request.args['errors'])
+        angries = 2**errors
+        return render_template('errors_to_anger.html', response = angries)
+    else:
+        return render_template('errors_to_anger.html')
+
 if __name__=="__main__":
     app.run(debug=False, port=54321)
 
