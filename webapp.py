@@ -17,7 +17,7 @@ def render_burrito():
 
 @app.route("/meter")
 def render_meter():
-    if meters in request.args:
+    if "meters" in request.args:
         meters = request.args['meters']
         centimeters = roundFloat(meters*100)
         return render_template('meter_to_centimeter.html', response = centimeters)
