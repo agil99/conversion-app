@@ -8,12 +8,15 @@ def render_main():
 
 @app.route("/burrito")
 def render_burrito():
-    money = float(request.args['money'])
-    # The request object stores information about the request sent to the server.
-    # args is a MultiDict (like a dictionary but can have multiple values for the same keys
-    # The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
-    num_burritos = roundFloat(money/8.5)
-    return render_template('burrito.html', response = num_burritos)
+    if 'money' in request.args['money']:
+        money = float(request.args['money'])
+        # The request object stores information about the request sent to the server.
+        # args is a MultiDict (like a dictionary but can have multiple values for the same keys
+        # The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
+        num_burritos = roundFloat(money/8.5)
+        return render_template('burrito.html', response = num_burritos)
+    else:
+        return render_template('burrito.html')
 
 @app.route("/meter")
 def render_meter():
