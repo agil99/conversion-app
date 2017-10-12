@@ -22,7 +22,7 @@ def render_meter():
         centimeters = roundFloat(meters*100)
         return render_template('meter_to_centimeter.html', response = centimeters)
     else
-        return render_template('meter_to_centimeter.html' response = null)
+        return render_template('meter_to_centimeter.html' response = "Enter")
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
