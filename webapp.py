@@ -8,7 +8,7 @@ def render_main():
 
 @app.route("/burrito")
 def render_burrito():
-    if 'money' in request.args:
+    if 'money' in request.args and request.args['money'] is defined:
         money = float(request.args['money'])
         # The request object stores information about the request sent to the server.
         # args is a MultiDict (like a dictionary but can have multiple values for the same keys
@@ -30,7 +30,7 @@ def render_meter():
 @app.route("/error")
 def render_error():
     if 'errors' in request.args:
-        errors = float(request.args['errors'])
+        errors = int(request.args['errors'])
         angries = 2**errors
         return render_template('errors_to_anger.html', response = angries)
     else:
