@@ -4,12 +4,14 @@
 {% block title %}U.S. Dollars to Chicken Ranch burrito conversion{% endblock %}
 
 {% block content %}
-    <form action='/burrito'>
-      Enter an amount of money.<br>
-      <input type="text" name="money">
-      <br><br>
-      <input type="submit">
-    </form>
+    <div>
+        <form action='/burrito'>
+          Enter an amount of money.<br>
+          <input type="text" name="money">
+          <br><br>
+          <input type="submit">
+        </form>
+    </div>
 
     {% if response is defined %}
         <p>You are able to buy {{ response }} Chicken Ranch burritos.</p>
